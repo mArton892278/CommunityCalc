@@ -24,12 +24,12 @@ def button_equal():
 
 expression = ""
 
-# Létrehozzuk a fő alkalmazást
+
 app = tk.Tk()
 app.geometry("300x400")
 app.title("Calculator")
 
-# Létrehozzuk az input mezőt
+
 input_text = tk.StringVar()
 input_frame = tk.Frame(app, width=312, height=50, bd=0, highlightbackground="black", highlightcolor="black", highlightthickness=1)
 input_frame.pack(side=tk.TOP)
@@ -40,11 +40,11 @@ input_field = tk.Entry(input_frame, font=('arial', 18, 'bold'), textvariable=inp
 input_field.grid(row=0, column=0)
 input_field.pack(ipady=10)
 
-# Létrehozzuk a gombokat
+
 button_frame = tk.Frame(app, width=312, height=272.5, bg="grey")
 button_frame.pack()
 
-# Gombok elrendezése a megadott módon
+
 button_percent = tk.Button(button_frame, text="%", padx=36, pady=20, command=lambda: button_click('%'))
 button_CE = tk.Button(button_frame, text="CE", padx=30, pady=20, command=lambda: button_clear())
 button_C = tk.Button(button_frame, text="C", padx=34, pady=20, command=lambda: button_clear())
@@ -67,7 +67,7 @@ button_dot = tk.Button(button_frame, text='.', padx=42, pady=20, command=lambda:
 button_add = tk.Button(button_frame, text='+', padx=39, pady=20, command=lambda: button_click('+'))
 button_equal = tk.Button(button_frame, text='=', padx=39, pady=20, command=button_equal)
 
-# Elrendezzük a gombokat a megfelelő helyre
+
 button_percent.grid(row=1, column=0)
 button_CE.grid(row=1, column=1)
 button_C.grid(row=1, column=2)
@@ -92,5 +92,5 @@ button_equal.grid(row=6, column=2)
 comma_button = tk.Button(button_frame, text=",", padx=40, pady=20, command=lambda: button_click('.'))
 comma_button.grid(row=6, column=1)
 
-# A program futtatása
+
 app.mainloop()
